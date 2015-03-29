@@ -14,7 +14,7 @@ describe "saved a drawing to the image folder:" do
 end
 
 describe "filled out models:" do
-  MODELS = ["book", "checkout", "country", "genre", "library", "member", "topic", "author"]
+  MODELS = ["book", "checkout", "county", "genre", "library", "member", "topic", "author"]
   it "each model file has content" do
     MODELS.each do |model|
       contents = read_file("app/models/#{model}.rb")
