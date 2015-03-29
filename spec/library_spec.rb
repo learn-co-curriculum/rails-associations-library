@@ -35,9 +35,7 @@ end
 
 describe "answered questions correctly:" do
   it "which one of the original eight migrations was a join table between memebers and books?" do
-    # for example, if the 07_create_genres.rb migration made the join table, you would write:
-    # file_name = "07_create_genres.rb"
-    file_name = __
+    file_name = "05_create_checkouts.rb"
     expect(encode(file_name)).to eq("578733af48e2ed4890e138fc3183f211ea1878fe")
   end
 end
