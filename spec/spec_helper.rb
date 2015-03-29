@@ -1,21 +1,28 @@
-require 'pry'
-require 'digest/sha1'
-
 RSpec.configure do |config|
-  # config here
-end
+  config.expect_with :rspec do |expectations|
+    expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
 
-def read_file(file_name)
-  file = File.open(file_name, "r")
-  data = file.read
-  file.close
-  return data
-end
+  config.mock_with :rspec do |mocks|
+    mocks.verify_partial_doubles = true
+  end
 
-def __
-  raise "Replace __ with your answer"
-end
+=begin
+  config.filter_run :focus
+  config.run_all_when_everything_filtered = true
 
-def encode(string)
-  Digest::SHA1.hexdigest(string)
+  config.example_status_persistence_file_path = "spec/examples.txt"
+
+  config.disable_monkey_patching!
+
+  if config.files_to_run.one?
+    config.default_formatter = 'doc'
+  end
+
+  config.profile_examples = 10
+
+  config.order = :random
+
+  Kernel.srand config.seed
+=end
 end
