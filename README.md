@@ -1,8 +1,4 @@
----
-tags: data modeling, models, associations, rails
-languages: ruby
-resources: 3
----
+
 
 # Library Data Modeling
 
