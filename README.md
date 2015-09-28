@@ -77,10 +77,6 @@ You will create a data model for a state's library system. There will be *at lea
 * Members checkout a book.
 * There is a start date and a due date.
 
-Tables usually have a number (hosts might seat a large party at table 6 because it's a huge corner booth but place a couple at table 10, a small table suited for two).
-
-When you make a reservation, you usually include a time. You don't just say, "I'd like to reserve a table for four." You say, "I'd like to reserve a table for four on Tuesday at 7pm." Therefore, reservations at the very least should have a start time.
-
 ## Instructions
 
 #### Draw the Domain
