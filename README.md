@@ -24,8 +24,7 @@ You will create a data model for a state's library system. There will be *at lea
 4. book
 5. author
 6. checkout
-7. topic
-8. genre
+7. genre
 
 ## Facts
 
@@ -50,7 +49,7 @@ You will create a data model for a state's library system. There will be *at lea
 
 ##### Books
 
-* Books usually live in one library.
+* The same book (title) can live in many libraries at the same time.
 * Books usually are about at least one topic (if you'd like them to be about more than one, feel free to build that out keeping in mind you will need to create join table for this relationship). 
 * Books have at least one author (if you'd like them to be about more than one, feel free to build that out keeping in mind you will need to create another join table for this relationship).
 * Books at least one genre (if you'd like them to be about more than one, feel free to build that out keeping in mind you will need to create yet another join table for this relationship).
@@ -61,11 +60,6 @@ You will create a data model for a state's library system. There will be *at lea
 
 * Authors write at least one book, but usually more. Stephen King has written more than fifty novels including *The Shining*, *Carrie*, and *Pet Sematary*.
 * Authors have a name (J.K. Rowling, J. D. Salinger, F. Scott Fitzgerald, etc.)
-
-##### Topics
-
-* There isn't just one book about the topic genetics, there are a bunch. For instance, there's *The Selfish Gene* by Richard Dawkines, *Genetics: A Conceptual Approach* by Benjamin A. Pierce, and *The Cosmic Serpent: DNA and the Origins of Knowledge* by Jeremy Narby.
-* Topics have a name (biology, philosophy, literary theory, etc.).
 
 ##### Genres
 
