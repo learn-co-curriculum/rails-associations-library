@@ -18,7 +18,7 @@
 
 You will create a data model for a state's library system. There will be *at least* eight models:
 
-1. country
+1. county
 2. library
 3. member
 4. book
