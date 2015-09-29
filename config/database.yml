@@ -12,13 +12,6 @@ test:
   timeout: 5000
   encoding: unicode
 
-staging:
-  adapter: postgresql
-  database: rails-associations-library_staging
-  pool: 5
-  timeout: 5000
-  encoding: unicode
-
 production:
   adapter: postgresql
   database: rails-associations-library_production
