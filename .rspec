@@ -1,3 +1,7 @@
 --color
+<<<<<<< HEAD
 --format documentation
 --require spec_helper
+=======
+--require spec_helper
+>>>>>>> initial commit
