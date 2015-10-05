@@ -15,7 +15,8 @@ RSpec.describe Author, type: :model do
     end
 
     it "responds to books method" do
-      expect(@author).to responds(:books)
+      @author.books.build
+      expect(@author).to have(:no).errors_on(:books)
     end
   end
 end
