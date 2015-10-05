@@ -9,11 +9,13 @@ RSpec.describe Author, type: :model do
     expect(@author.name).to eq("Chimamanda Ngozi Adichie")
   end
 
-  it "responds to author_books method" do
-    expect(@author).to respond_to(:author_books)
-  end
+  describe "associations" do
+    it "responds to author_books method" do
+      expect(@author).to respond_to(:author_books)
+    end
 
-  it "responds to books method" do
-    expect(@author).to responds(:books)
+    it "responds to books method" do
+      expect(@author).to responds(:books)
+    end
   end
 end
