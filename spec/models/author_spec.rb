@@ -10,6 +10,7 @@ RSpec.describe Author, type: :model do
   end
 
   it "responds to author_books method" do
-    @author.should respond_to(:author_books)
+    expect(@author).to respond_to(:author_books)
+    # @author.should respond_to(:author_books)
   end
 end
