@@ -20,4 +20,10 @@ RSpec.describe Book, type: :model do
       expect(book).to respond_to(:authors)
     end
   end
+
+  context "relationship to genre" do
+    it "responds to genre" do
+      expect(book).to respond_to(:genre)
+    end
+  end
 end
