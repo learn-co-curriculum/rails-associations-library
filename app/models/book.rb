@@ -10,4 +10,5 @@ class Book < ActiveRecord::Base
   has_many :readers, :through => :checkouts
   has_many :author_books
   has_many :authors, through: :author_books
+  belongs_to :genre
 end
