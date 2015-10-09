@@ -12,4 +12,5 @@ class Book < ActiveRecord::Base
   has_many :authors, through: :author_books
   belongs_to :genre
   has_many :library_books
+  has_many :libraries, through: :library_books
 end
