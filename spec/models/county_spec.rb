@@ -1,7 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe County, type: :model do
-  it 'has a name and a description' do
-    expect {County.create(:name => "Kings County")}.to_not raise_error
+  let(:county) {County.create(:name => "Kings County")}
+
+  it 'has a name' do
+    expect(county.name).to eq("Kings County")
+  end
+
+  context "relationship to library" do
+    it "responds to libraries method" do
+      expect(county).to respond_to(:libraries)
+    end
   end
 end
