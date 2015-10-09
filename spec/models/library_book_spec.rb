@@ -10,4 +10,8 @@ RSpec.describe LibraryBook, type: :model do
   it "responds to book_id" do
     expect(library_book.book_id).to eq(book.id)
   end
+
+  it "responds to library_id" do
+    expect(library_book.library_id).to eq(library.id)
+  end
 end
