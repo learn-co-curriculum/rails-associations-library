@@ -36,4 +36,10 @@ RSpec.describe Book, type: :model do
       expect(book_libraries_collection).to include(library)
     end
   end
+
+  context "relationship to checkout" do
+    it "responds to checkouts" do
+      expect(book).to respond_to(:checkouts)
+    end
+  end
 end
