@@ -20,5 +20,6 @@ RSpec.describe Library, type: :model do
   context "relationship to county" do
     it "responds to county method" do
       expect(library).to respond_to(:county_id)
+    end
   end
 end
