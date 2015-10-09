@@ -1,7 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Book, type: :model do
+  let(:library) {Library.create(:name => "Brooklyn Public Library", :address => "431 6th Ave, Brooklyn, NY 11215")}
+
   let(:book) {Book.create(:title => "Half of a Yellow Sun", :description => "With effortless grace, celebrated author Chimamanda Ngozi Adichie illuminates a seminal moment in modern African history: Biafra's impassioned struggle to establish an independent republic in southeastern Nigeria during the late 1960s.")}
+
+  let(:book_libraries_collection) { book.libraries << library}
 
   it 'has a title' do
     expect(book.title).to eq("Half of a Yellow Sun")
@@ -24,6 +28,12 @@ RSpec.describe Book, type: :model do
   context "relationship to genre" do
     it "responds to genre" do
       expect(book).to respond_to(:genre)
+    end
+  end
+
+  context "relationship to library" do
+    it "responds to libraries method" do
+      expect(book.libraries).to include(library)
     end
   end
 end
