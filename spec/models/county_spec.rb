@@ -12,4 +12,10 @@ RSpec.describe County, type: :model do
       expect(county).to respond_to(:libraries)
     end
   end
+
+  context "relationship to member" do
+    it 'responds to members method' do
+      expect(county).to respond_to(:members)
+    end
+  end
 end

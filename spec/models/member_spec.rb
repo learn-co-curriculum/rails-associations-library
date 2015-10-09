@@ -1,7 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Member, type: :model do
-  it 'has a name and a description' do
-    expect {Member.create(:name => "Uzo Aduba")}.to_not raise_error
+  let(:member) {Member.create(:name => "Uzo Aduba")}
+
+  it "has a name" do
+    expect(member).to respond_to(:name)
+  end
+
+  context "relation to county" do
+    it "responds to counties method" do
+      expect(member).to respond_to(:counties)
+    end
   end
 end
