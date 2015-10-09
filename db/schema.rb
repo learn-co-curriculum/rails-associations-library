@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005175211) do
+ActiveRecord::Schema.define(version: 20151009125419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,16 @@ ActiveRecord::Schema.define(version: 20151005175211) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "library_books", force: :cascade do |t|
+    t.integer  "library_id"
+    t.integer  "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "library_books", ["book_id"], name: "index_library_books_on_book_id", using: :btree
+  add_index "library_books", ["library_id"], name: "index_library_books_on_library_id", using: :btree
+
   create_table "members", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -73,4 +83,6 @@ ActiveRecord::Schema.define(version: 20151005175211) do
 
   add_foreign_key "author_books", "authors"
   add_foreign_key "author_books", "books"
+  add_foreign_key "library_books", "books"
+  add_foreign_key "library_books", "libraries"
 end
