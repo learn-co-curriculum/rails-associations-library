@@ -33,7 +33,7 @@ RSpec.describe Book, type: :model do
 
   context "relationship to library" do
     it "responds to libraries method" do
-      expect(book.libraries).to include(library)
+      expect(book_libraries_collection).to include(library)
     end
   end
 end
