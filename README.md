@@ -32,6 +32,7 @@ You will create a data model for a state's library system. There will be *at lea
 * Books can have more than one author.
 * Books have at least one genre.
 * The same book (title) can live in many libraries at the same time.
+
 * Books usually are about at least one topic (if you'd like them to be about more than one, feel free to build that out keeping in mind you will need to create join table for this relationship).
 * Once books have been checked out, they can always be checked out again.
 
