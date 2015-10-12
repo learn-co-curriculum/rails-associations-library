@@ -1,45 +1,19 @@
 require 'rails_helper'
 
-RSpec.describe Book, type: :model do
-  let(:library) {Library.create(:name => "Brooklyn Public Library", :address => "431 6th Ave, Brooklyn, NY 11215")}
+RSpec.describe Author, type: :model do
+  let(:author) {Author.create(:name => "Chimamanda Ngozi Adichie")}
 
-  let(:book) {Book.create(:title => "Half of a Yellow Sun", :description => "With effortless grace, celebrated author Chimamanda Ngozi Adichie illuminates a seminal moment in modern African history: Biafra's impassioned struggle to establish an independent republic in southeastern Nigeria during the late 1960s.")}
-
-  let(:book_libraries_collection) { book.libraries << library}
-
-  it 'has a title' do
-    expect(book.title).to eq("Half of a Yellow Sun")
+  it "has a name" do
+    expect(author.name).to eq("Chimamanda Ngozi Adichie")
   end
 
-  it "has a description" do
-  expect(book.description).to eq("With effortless grace, celebrated author Chimamanda Ngozi Adichie illuminates a seminal moment in modern African history: Biafra's impassioned struggle to establish an independent republic in southeastern Nigeria during the late 1960s.")
-  end
-
-  context "relationship to author" do
+  describe "associations" do
     it "responds to author_books method" do
-      expect(book).to respond_to(:author_books)
+      expect(author).to respond_to(:author_books)
     end
 
-    it "responds to authors method" do
-      expect(book).to respond_to(:authors)
-    end
-  end
-
-  context "relationship to genre" do
-    it "responds to genre" do
-      expect(book).to respond_to(:genre)
-    end
-  end
-
-  context "relationship to library" do
-    it "responds to libraries method" do
-      expect(book_libraries_collection).to include(library)
-    end
-  end
-
-  context "relationship to checkout" do
-    it "responds to checkouts" do
-      expect(book).to respond_to(:checkouts)
+    it "responds to books method" do
+      expect(author).to respond_to(:books)
     end
   end
 end
