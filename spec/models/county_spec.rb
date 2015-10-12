@@ -7,13 +7,13 @@ RSpec.describe County, type: :model do
     expect(county.name).to eq("Kings County")
   end
 
-  context "relationship to library" do
+  describe "relationship to library" do
     it "responds to libraries method" do
       expect(county).to respond_to(:libraries)
     end
   end
 
-  context "relationship to member" do
+  describe "relationship to member" do
     it 'responds to members method' do
       expect(county).to respond_to(:members)
     end

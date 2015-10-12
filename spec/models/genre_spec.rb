@@ -9,7 +9,7 @@ RSpec.describe Genre, type: :model do
     end
   end
 
-  context "relationship to book" do
+  describe "relationship to book" do
     it "responds to books method" do
       expect(genre).to respond_to(:books)
     end
