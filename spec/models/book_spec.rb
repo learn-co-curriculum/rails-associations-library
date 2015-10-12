@@ -15,7 +15,7 @@ RSpec.describe Book, type: :model do
   expect(book.description).to eq("With effortless grace, celebrated author Chimamanda Ngozi Adichie illuminates a seminal moment in modern African history: Biafra's impassioned struggle to establish an independent republic in southeastern Nigeria during the late 1960s.")
   end
 
-  context "relationship to author" do
+  describe "relationship to author" do
     it "responds to author_books method" do
       expect(book).to respond_to(:author_books)
     end
@@ -25,19 +25,19 @@ RSpec.describe Book, type: :model do
     end
   end
 
-  context "relationship to genre" do
+  describe "relationship to genre" do
     it "responds to genre" do
       expect(book).to respond_to(:genre)
     end
   end
 
-  context "relationship to library" do
+  describe "relationship to library" do
     it "responds to libraries method" do
       expect(book_libraries_collection).to include(library)
     end
   end
 
-  context "relationship to checkout" do
+  describe "relationship to checkout" do
     it "responds to checkouts" do
       expect(book).to respond_to(:checkouts)
     end
