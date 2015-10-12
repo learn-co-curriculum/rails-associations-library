@@ -13,7 +13,7 @@ RSpec.describe Checkout, type: :model do
     expect(checkout).to respond_to(:date_returned)
   end
 
-  context "relationship to book" do
+  describe "relationship to book" do
     it "responds to books method" do
       expect(checkout).to respond_to(:book)
     end
