@@ -32,29 +32,24 @@ You will create a data model for a state's library system. There will be *at lea
 * Books can have more than one author.
 * Books have at least one genre.
 * The same book (title) can live in many libraries at the same time.
-
 * Books usually are about at least one topic (if you'd like them to be about more than one, feel free to build that out keeping in mind you will need to create join table for this relationship).
 * Once books have been checked out, they can always be checked out again.
-
 
 ##### Authors
 
 * Authors have a name (J.K. Rowling, J. D. Salinger, F. Scott Fitzgerald, etc.)
 * Authors write at least one book, but usually more. Stephen King has written more than fifty novels including *The Shining*, *Carrie*, and *Pet Sematary*.
 
-
 ##### Genres
 
 * Genres have a name (mystery, romance, humor, etc.).
 * There isn't just one book that falls in the mystery genre, there are quite a few: *Gone Girl* by Gillian Flynn, *Claire DeWitt and the Bohemian Highway* by Sara Gran, and *The Maltese Falcon* by Dashiell Hammett to name a few.
-
 
 ###### Members
 
 * Members have a name.
 * Members can have more than one county.
 * As a library member, you can checkout more than one book.
-
 
 ##### Libraries
 
@@ -63,13 +58,11 @@ You will create a data model for a state's library system. There will be *at lea
 * Libraries hold a ton of books, not just one.
 * Libraries are located in a specific county.
 
-
 ##### Counties
 
 * Counties have a name (Kings Country, Westchester Country, Queens Country, etc.)
 * Counties have a few libraries in them. For instance, in Denver, CO there is large, centrally located library called the Denver Public Library and several smaller ones (Byers Branch Library, Ford-Warren Branch Library, etc.)
 * Counties have many library members.
-
 
 ###### Checkouts
 
@@ -85,7 +78,6 @@ Using the white board, paper, or the sticky pads in the back, draw a picture of 
 #### Fill Out Models and Migrations
 
 Use the information provided in the *Facts* section to create the appropriate tables and fill out the correction associations for your models.
-
 
 ## Run the Testing Suite
 
