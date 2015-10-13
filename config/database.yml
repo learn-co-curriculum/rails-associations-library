@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  database: rails-associations-library_development
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+
+test:
+  adapter: postgresql
+  database: rails-associations-library_test
+  pool: 5
+  timeout: 5000
+  encoding: unicode
+
+production:
+  adapter: postgresql
+  database: rails-associations-library_production
+  pool: 5
+  timeout: 5000
+  encoding: unicode
