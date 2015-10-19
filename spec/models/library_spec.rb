@@ -20,9 +20,6 @@ RSpec.describe Library, type: :model do
   describe "relationship to county" do
     it "responds to county method" do
       expect(library).to respond_to(:county_id)
-<<<<<<< HEAD
     end
-=======
->>>>>>> master
   end
 end

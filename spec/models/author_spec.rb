@@ -16,8 +16,4 @@ RSpec.describe Author, type: :model do
       expect(author).to respond_to(:books)
     end
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> master
