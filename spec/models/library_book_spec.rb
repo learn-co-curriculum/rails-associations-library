@@ -7,11 +7,15 @@ RSpec.describe LibraryBook, type: :model do
 
   let(:library_book) {LibraryBook.create(:book_id => book.id, :library_id => library.id)}
 
-  it "responds to book_id" do
-    expect(library_book.book_id).to eq(book.id)
+  describe "relationship to book" do
+    it "responds to book_id" do
+      expect(library_book.book_id).to eq(book.id)
+    end
   end
 
-  it "responds to library_id" do
-    expect(library_book.library_id).to eq(library.id)
+  describe "relationship to library" do
+    it "responds to library_id" do
+      expect(library_book.library_id).to eq(library.id)
+    end
   end
 end
