@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Genre, type: :model do
-  let(genre) {Genre.create(:name => "Fiction")}
+  let(:genre) {Genre.create(:name => "Fiction")}
 
   describe "its attributes" do
     it "has a name" do
