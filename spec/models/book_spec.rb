@@ -32,6 +32,7 @@ RSpec.describe Book, type: :model do
 
     it "responds to genres" do
     expect(book).to respond_to(:genre)
+    end
   end
 
   describe "relationship to library" do
