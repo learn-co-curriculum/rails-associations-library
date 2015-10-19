@@ -31,7 +31,7 @@ RSpec.describe Book, type: :model do
     end
 
     it "responds to genres" do
-    expect(book).to respond_to(:genre)
+    expect(book).to respond_to(:genres)
     end
   end
 
