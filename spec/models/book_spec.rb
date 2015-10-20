@@ -26,8 +26,8 @@ RSpec.describe Book, type: :model do
   end
 
   describe "connection to genre model" do
-      it "responds to book_genres method" do
-        expect(book).to respond_to(:book_genres)
+      it "responds to genre_books method" do
+        expect(book).to respond_to(:genre_books)
       end
 
       it "responds to genres method" do
