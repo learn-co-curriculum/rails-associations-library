@@ -9,13 +9,13 @@ RSpec.describe LibraryBook, type: :model do
 
   describe "relationship to book" do
     it "responds to books method" do
-      expect(library_book).to respond_to(:books)
+      expect(library_book).to respond_to(:book)
     end
   end
 
   describe "relationship to library" do
     it "responds to libraries method" do
-      expect(library_book).to respond_to(:libraries)
+      expect(library_book).to respond_to(:library)
     end
   end
 end

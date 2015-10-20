@@ -19,7 +19,7 @@ RSpec.describe Library, type: :model do
 
   describe "relationship to county" do
     it "responds to countries method" do
-      expect(library).to respond_to(:countries)
+      expect(library).to respond_to(:county)
     end
   end
 end
