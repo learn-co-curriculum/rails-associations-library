@@ -26,11 +26,11 @@ RSpec.describe Book, type: :model do
   end
 
   describe "relationship to genre" do
-    it "responds to genre" do
+    it "responds to book_genres method" do
       expect(book).to respond_to(:book_genres)
     end
 
-    it "responds to genres" do
+    it "responds to genres method" do
     expect(book).to respond_to(:genres)
     end
   end
@@ -42,7 +42,7 @@ RSpec.describe Book, type: :model do
   end
 
   describe "relationship to checkout" do
-    it "responds to checkouts" do
+    it "responds to checkouts methods" do
       expect(book).to respond_to(:checkouts)
     end
   end

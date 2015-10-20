@@ -8,14 +8,14 @@ RSpec.describe BookGenre, type: :model do
    let(:book_genre) {BookGenre.create(:book_id => book.id, :genre_id => genre.id)}
 
   describe "relationship to book" do
-    it "responds to book_id" do
-      expect(library_book.book_id).to eq(book.id)
+    it "responds to books method" do
+      expect(book_genre.books).to respond_to(:books)
     end
   end
 
   describe "relationship to genre" do
-    it "responds to genre_id" do
-      expect(book_genre.genre_id).to eq(genre.id)
+    it "responds to genres method" do
+      expect(book_genre.genre_id).to respond_to(:genres)
     end
   end
 end

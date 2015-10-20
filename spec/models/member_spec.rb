@@ -25,7 +25,7 @@ RSpec.describe Member, type: :model do
     end
   end
 
-  describe "relation to books" do
+  describe "relation to book" do
     it "responds to books method" do
       expect(member).to respond_to(:books)
     end
