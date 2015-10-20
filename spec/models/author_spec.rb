@@ -8,12 +8,13 @@ RSpec.describe Author, type: :model do
   end
 
   describe "connection to book model" do
+    it "responds to book_authors method" do
+      expect(author).to respond_to(:book_authors)
+    end
+
     it "responds to books method" do
       expect(author).to respond_to(:books)
     end
 
-    it "responds to book_authors method" do
-      expect(author).to respond_to(:book_authors)
-    end
   end
 end
