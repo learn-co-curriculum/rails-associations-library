@@ -12,9 +12,13 @@ RSpec.describe Library, type: :model do
   end
 
   describe "connection to book model" do
-    it "responds to books method" do
-      expect(library).to respond_to(:books)
-    end
+      it "responds to library_books method" do
+        expect(library).to respond_to(:library_books)
+      end
+
+      it "responds to books method" do
+        expect(library).to respond_to(:books)
+      end
   end
 
   describe "connection to county model" do

@@ -36,13 +36,17 @@ RSpec.describe Book, type: :model do
   end
 
   describe "connection to library model" do
-    it "responds to libraries method" do
-      expect(book).to respond_to(:libraries)
-    end
+      it "responds to library_books method" do
+        expect(book).to respond_to(:library_books)
+      end
+
+      it "responds to books method" do
+        expect(book).to respond_to(:libraries)
+      end
   end
 
   describe "connection to checkout model" do
-    it "responds to checkouts methods" do
+    it "responds to checkouts method" do
       expect(book).to respond_to(:checkouts)
     end
   end
