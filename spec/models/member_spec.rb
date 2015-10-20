@@ -7,25 +7,25 @@ RSpec.describe Member, type: :model do
     expect(member).to respond_to(:name)
   end
 
-  describe "relation to county" do
+  describe "connection to county model" do
     it "responds to counties method" do
       expect(member).to respond_to(:counties)
     end
   end
 
-  describe "relation to library" do
+  describe "connection to library model" do
     it "responds to libraries method" do
       expect(member).to respond_to(:libraries)
     end
   end
 
-  describe "relation to checkout" do
+  describe "connection to checkout model" do
     it "responds to checkouts method" do
       expect(member).to respond_to(:checkouts)
     end
   end
 
-  describe "relation to book" do
+  describe "connection to book model" do
     it "responds to books method" do
       expect(member).to respond_to(:books)
     end

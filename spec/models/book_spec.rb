@@ -41,7 +41,7 @@ RSpec.describe Book, type: :model do
     end
   end
 
-  describe "relationship to checkout" do
+  describe "connection to checkout model" do
     it "responds to checkouts methods" do
       expect(book).to respond_to(:checkouts)
     end
