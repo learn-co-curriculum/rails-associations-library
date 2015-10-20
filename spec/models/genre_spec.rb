@@ -18,5 +18,4 @@ RSpec.describe Genre, type: :model do
         expect(book).to respond_to(:books)
       end
   end
-
 end
