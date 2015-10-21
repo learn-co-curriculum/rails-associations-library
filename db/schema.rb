@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151020200947) do
+ActiveRecord::Schema.define(version: 20151021195718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,17 +25,29 @@ ActiveRecord::Schema.define(version: 20151020200947) do
   create_table "book_authors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "author_id"
+    t.integer  "book_id"
   end
 
+  add_index "book_authors", ["author_id"], name: "index_book_authors_on_author_id", using: :btree
+  add_index "book_authors", ["book_id"], name: "index_book_authors_on_book_id", using: :btree
+
   create_table "books", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "title"
+    t.text     "description"
   end
 
   create_table "checkouts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.date     "start_date"
+    t.date     "date_returned"
+    t.integer  "book_id"
   end
+
+  add_index "checkouts", ["book_id"], name: "index_checkouts_on_book_id", using: :btree
 
   create_table "counties", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -67,4 +79,7 @@ ActiveRecord::Schema.define(version: 20151020200947) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "book_authors", "authors"
+  add_foreign_key "book_authors", "books"
+  add_foreign_key "checkouts", "books"
 end

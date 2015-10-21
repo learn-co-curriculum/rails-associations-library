@@ -50,4 +50,5 @@ RSpec.describe Book, type: :model do
       expect(book).to respond_to(:checkouts)
     end
   end
+
 end
