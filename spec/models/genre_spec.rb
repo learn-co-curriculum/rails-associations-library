@@ -11,11 +11,11 @@ RSpec.describe Genre, type: :model do
 
   describe "connection to book model" do
       it "responds to genre_books method" do
-        expect(book).to respond_to(:genre_books)
+        expect(genre).to respond_to(:genre_books)
       end
 
       it "responds to books method" do
-        expect(book).to respond_to(:books)
+        expect(genre).to respond_to(:books)
       end
   end
 end
