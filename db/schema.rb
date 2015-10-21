@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021221129) do
+ActiveRecord::Schema.define(version: 20151021222811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,11 +68,17 @@ ActiveRecord::Schema.define(version: 20151021221129) do
   create_table "genre_books", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "book_id"
+    t.integer  "genre_id"
   end
+
+  add_index "genre_books", ["book_id"], name: "index_genre_books_on_book_id", using: :btree
+  add_index "genre_books", ["genre_id"], name: "index_genre_books_on_genre_id", using: :btree
 
   create_table "genres", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   create_table "libraries", force: :cascade do |t|
@@ -95,4 +101,6 @@ ActiveRecord::Schema.define(version: 20151021221129) do
   add_foreign_key "checkouts", "books"
   add_foreign_key "county_memberships", "counties"
   add_foreign_key "county_memberships", "members"
+  add_foreign_key "genre_books", "books"
+  add_foreign_key "genre_books", "genres"
 end
