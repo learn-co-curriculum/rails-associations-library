@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021222811) do
+ActiveRecord::Schema.define(version: 20151022000207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,16 +84,24 @@ ActiveRecord::Schema.define(version: 20151021222811) do
   create_table "libraries", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "address"
+    t.string   "name"
   end
 
   create_table "library_books", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "book_id"
+    t.integer  "library_id"
   end
+
+  add_index "library_books", ["book_id"], name: "index_library_books_on_book_id", using: :btree
+  add_index "library_books", ["library_id"], name: "index_library_books_on_library_id", using: :btree
 
   create_table "members", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "name"
   end
 
   add_foreign_key "book_authors", "authors"
@@ -103,4 +111,6 @@ ActiveRecord::Schema.define(version: 20151021222811) do
   add_foreign_key "county_memberships", "members"
   add_foreign_key "genre_books", "books"
   add_foreign_key "genre_books", "genres"
+  add_foreign_key "library_books", "books"
+  add_foreign_key "library_books", "libraries"
 end
