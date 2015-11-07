@@ -4,5 +4,6 @@ class Member < ActiveRecord::Base
 
   has_many :libraries, through: :counties
   has_many :books, through: :libraries
-  has_many :checkouts, through: :books
+
+  has_many :checkouts
 end
