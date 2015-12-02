@@ -70,3 +70,5 @@ Use the information provided in the *Facts* section to create the appropriate ta
 * [Has Many](http://guides.rubyonrails.org/association_basics.html#the-has-many-association)
 * [Has Many Through](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association)
 * [Belongs To](http://guides.rubyonrails.org/association_basics.html#the-belongs-to-association)
+
+<a href='https://learn.co/lessons/rails-associations-library' data-visibility='hidden'>View this lesson on Learn.co</a>
