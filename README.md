@@ -71,4 +71,4 @@ Use the information provided in the *Facts* section to create the appropriate ta
 * [Has Many Through](http://guides.rubyonrails.org/association_basics.html#the-has-many-through-association)
 * [Belongs To](http://guides.rubyonrails.org/association_basics.html#the-belongs-to-association)
 
-<a href='https://learn.co/lessons/rails-associations-library' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-associations-library' title='Library Data Modeling'>Library Data Modeling</a> on Learn.co and start learning to code for free.</p>
